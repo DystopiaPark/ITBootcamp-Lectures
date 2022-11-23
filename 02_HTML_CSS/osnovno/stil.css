@@ -1,0 +1,10 @@
+a {
+  color: green;
+  font-style: italic;
+}
+.para {
+  font-style: italic;
+}
+#moj_paragraf {
+  border: solid green 3px;
+}
