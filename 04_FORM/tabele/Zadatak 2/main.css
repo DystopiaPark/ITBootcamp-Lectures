@@ -1,0 +1,6 @@
+tr td:nth-child(3) {
+  background: yellow;
+}
+tr th:nth-child(3) {
+  background: yellow;
+}

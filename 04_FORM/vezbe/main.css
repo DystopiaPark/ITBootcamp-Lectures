@@ -1,0 +1,16 @@
+form {
+  max-width: 500px;
+}
+legend {
+  font-size: 2rem;
+}
+fieldset {
+  border: 5px solid grey;
+}
+label {
+  display: inline-block;
+  min-width: 130px;
+}
+button {
+  margin-left: 135px;
+}
