@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+header {
+  position: relative;
+  background-image: url("/Radiohead_OK_Computer_1997.jpg.png");
+  object-fit: contain;
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  border: 2px red solid;
+}
+div {
+  position: absolute;
+  background: beige;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

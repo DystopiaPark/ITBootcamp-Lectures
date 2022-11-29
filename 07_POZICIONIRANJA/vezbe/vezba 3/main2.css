@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.topbar {
+  position: fixed;
+  height: 100vh;
+  background-color: purple;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  height: 100%;
+  background-color: rgb(64, 64, 64);
+  color: white;
+  text-transform: capitalize;
+}
+ul li:hover {
+  cursor: pointer;
+  background-color: red;
+}
+#special {
+  border-right: none;
+}
