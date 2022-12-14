@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="row">
+      <header class="col-12">
+        <h2>Air SERBIA</h2>
+      </header>
+    </div>
+    <div class="row">
+      <nav class="col-12">
+        <ul>
+          <li>
+            <em><a href="#" id="quack">AirSerbia</a></em>
+          </li>
+          <li><a href="#">Letovi</a></li>
+          <li><a href="#">Destinacije</a></li>
+          <li><a href="#">Informacije</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="row">
+      <aside class="col-4">
+        <h3>Letovi</h3>
+        <img src="/slike/letovi.jpg" alt="" />
+      </aside>
+      <span class="col-1">&nbsp;</span>
+      <section class="col-6">
+        <h3>Destinacije</h3>
+        <img src="/slike/destinacije.jpg" alt="" />
+        <ul>
+          <li><a href="#">Evropa</a></li>
+          <li><a href="#">Azija</a></li>
+          <li><a href="#">Afrika</a></li>
+          <li><a href="#">Amerika</a></li>
+        </ul>
+      </section>
+      <span class="col-1">&nbsp;</span>
+    </div>
+    <aside class="col-4">
+      <h3>Informacije</h3>
+      <img src="/slike/informacije.jpg" alt="" />
+    </aside>
+    <span class="col-1">&nbsp;</span>
+    <form action="php.com" method="get" class="col-6">
+      <fieldset>
+        <h3>Kontakt</h3>
+        <div>
+          <label for="mail">Email:</label>
+          <input type="mail" name="mail" placeholder="Unesite mail" />
+        </div>
+        <div>
+          <label for="text">Tekst Poruke:</label>
+          <textarea name="text" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="quack">
+          <label for="check">Prihvatam</label>
+          <input type="checkbox" name="check" value="checked" id="special" />
+        </div>
+        <button type="submit" value="send">Posalji</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

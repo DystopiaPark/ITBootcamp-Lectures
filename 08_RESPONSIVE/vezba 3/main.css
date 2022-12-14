@@ -1,0 +1,123 @@
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  overflow: hidden;
+}
+aside {
+  padding: 0.5rem;
+  padding-bottom: 3rem;
+}
+aside p {
+  padding: 0.5rem;
+}
+aside p:nth-child(2) {
+  font-style: italic;
+}
+header h4 {
+  padding: 1rem 0;
+}
+header,
+footer {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1001px) {
+  [class*="col-"] {
+    float: left;
+    /* svi divovi odu na nulu OVERFLOW: HIDDEN primeniti na parent klasu (.row) */
+  }
+  .sec-1 {
+    height: 200px;
+  }
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+
+  header {
+    background-color: aqua;
+  }
+
+  nav {
+    background-color: rgb(15, 138, 138);
+  }
+
+  .sec-2 {
+    background-image: linear-gradient(#91dbe5, #e5e5e5);
+    padding-bottom: 2rem;
+  }
+  .sec-2 h5 {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  .sec-2 p {
+    padding-bottom: 1rem;
+    font-style: italic;
+    padding-right: 1rem;
+  }
+  aside {
+    background: linear-gradient(#91dbe5, #e5e5e5);
+  }
+
+  footer {
+    background-color: aqua;
+  }
+  nav li {
+    border-bottom: 1px solid white;
+  }
+
+  li:nth-child(3) {
+    border: none;
+  }
+}

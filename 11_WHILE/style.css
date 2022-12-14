@@ -1,0 +1,15 @@
+.plava {
+  color: blue;
+}
+.zelena {
+  color: green;
+}
+.crvena {
+  color: red;
+}
+.border1 {
+  border: 2px solid blue;
+}
+.border2 {
+  border: 2px dotted red;
+}
