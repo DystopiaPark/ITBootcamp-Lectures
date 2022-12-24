@@ -303,5 +303,12 @@ document.body.innerHTML += lista;
 
 // 22. Kreirati 64 span elemenata i rasporediti ih kao na slici desno, koristeći for petlju. *
 
+for (i = 1; i <= 64; i++) {
+  document.body.innerHTML += `<span>${i}</span>`;
+  if (i % 8 == 0) {
+    document.body.innerHTML += `<br>`;
+  }
+}
+
 // 23. Kreirati 64 span elemenata i rasporediti ih kao na slici desno, tako da elementi izgledaju kao polja šahovske table.
 // U realizaciji ovog zadatka koristiti for petlju. *
