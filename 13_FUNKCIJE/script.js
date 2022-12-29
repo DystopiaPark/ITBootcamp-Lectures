@@ -75,10 +75,10 @@ zbir("sabiranje", 5, 3);
 // Napisati funkciju neparan koja za uneti ceo broj n vraća tačno ukoliko je neparan ili netačno ukoliko nije neparan.
 
 function neparan(n) {
-  if (n % 2 == 0) {
-    return "Paran broj";
+  if (n % 2 != 0) {
+    return true;
   } else {
-    return "Neparan broj";
+    return false;
   }
 }
 neparan(3);
@@ -331,5 +331,5 @@ function magija(t, p, n) {
     return p + n - t;
   }
 }
-let z = magija(25, 20, 30);
+let z = magija(25, 20, 5);
 console.log(z);

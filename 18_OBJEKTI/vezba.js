@@ -96,7 +96,7 @@ let dan = {
   // vraća false.
   nepovoljanDan: function () {
     vrednost = false;
-    for (i = 0; i < this.temperatura.length; i++) {
+    for (i = 0; i < this.temperatura.length - 1; i++) {
       if (Math.abs(this.temperatura[i] - this.temperatura[i + 1]) > 8) {
         vrednost = true;
       }
