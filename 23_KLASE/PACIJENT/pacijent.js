@@ -41,21 +41,32 @@ class Pacijent {
       this._tezina = 70;
     }
   }
-  // METODE ======================================================
-
+  // METODE ================================================================
+  // =======================================================================
   // STAMPAJ =================================
   Stampaj() {
     console.log(this); // ???
   }
+  // STAMPAJ LISTU ===================================================
+  StampajListu() {
+    let htmlLista = `<ul>
+        <li>Ime: ${this.ime}</li>
+        <li>Visina: ${this.visina}</li>
+        <li>Tezina: ${this.tezina}</li>
+      </ul>`;
+    return htmlLista;
+  }
   // BMI ========================================================
   Bmi() {
-    return this._tezina / Math.pow(this._visina / 100, 2);
+    return this._tezina / Math.pow(this._visina, 2);
   }
   // KRITICAN ===============================================
   Kritican() {
-    if (this.Bmi() > 15 && this.Bmi() < 40) {
+    if (this.Bmi() < 15 || this.Bmi() > 40) {
+      console.log(this.Bmi());
       return true;
     } else {
+      console.log(this.Bmi());
       return false;
     }
   }

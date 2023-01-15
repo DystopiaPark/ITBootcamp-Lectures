@@ -4,10 +4,11 @@ class Film {
   #godinaIzdanja;
   // nije jos uvek standard, taraba sluzi za onemogucavanje menjanje sadrzaja van klase
 
-  constructor(naslov, reziser, godinaIzdanja) {
+  constructor(naslov, reziser, godinaIzdanja, ocene) {
     this.naslov = naslov;
     this.reziser = reziser;
     this.godinaIzdanja = godinaIzdanja;
+    this.ocene = ocene;
   }
 
   stampaj() {
@@ -54,6 +55,26 @@ class Film {
     } else {
       this.#godinaIzdanja = g;
     }
+  }
+
+  // OCENE=======================================================================
+  get ocene() {
+    return this._ocene;
+  }
+  set ocene(o) {
+    if (Array.isArray(o)) {
+      this._ocene = o;
+    } else {
+      this._ocene = [];
+    }
+  }
+  // PROSEK=======================================================================
+  prosek() {
+    let acc = 0;
+    this.ocene.forEach((el) => {
+      acc += el;
+    });
+    return acc / this.ocene.length;
   }
 }
 
