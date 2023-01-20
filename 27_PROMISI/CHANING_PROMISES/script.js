@@ -9,6 +9,7 @@ let getResponse = (resource) => {
   request.send();
 
   let obj = new Promise((resolve, reject) => {
+    // moze i direktno return New Promise
     request.addEventListener("readystatechange", () => {
       if (request.readyState == 4 && request.status == 200) {
         // Sve OK i koristimo resolve kome prosledjujemo podatke iz JSON fajla
