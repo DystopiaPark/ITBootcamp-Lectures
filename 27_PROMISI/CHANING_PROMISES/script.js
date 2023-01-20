@@ -39,7 +39,7 @@ getResponse("../JSON/prvi.json")
     console.log("treci .json resloved", sadrzajTreceg);
   })
   .catch((greska) => {
-    console.log("Promije reject", greska); // Catch je jedan <3
+    console.log("Promise reject", greska); // Catch je jedan <3
   });
 
 console.log("KRAJ");
