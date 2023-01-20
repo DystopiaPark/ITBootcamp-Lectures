@@ -1,7 +1,3 @@
-////////////////////////////////////////////////////////
-// =============== CHAINING PROMISES =============== //
-//////////////////////////////////////////////////////
-
 let getResponse = (resource) => {
   // 1. Kreiranje XML objekta
   let request = new XMLHttpRequest();
@@ -26,6 +22,10 @@ let getResponse = (resource) => {
   return obj;
 };
 
+////////////////////////////////////////////////////////
+// =============== CHAINING PROMISES =============== //
+//////////////////////////////////////////////////////
+
 getResponse("../JSON/prvi.json")
   .then((sadrzaj) => {
     console.log("prvi.json resolved", sadrzaj);
@@ -43,3 +43,7 @@ getResponse("../JSON/prvi.json")
   });
 
 console.log("KRAJ");
+
+////////////////////////////////////////////////////////
+// =============== CHAINING PROMISES =============== //
+//////////////////////////////////////////////////////
