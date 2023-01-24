@@ -197,10 +197,10 @@ let najcescaOcena2 = (niz) => {
   });
   let max = nizBrojaca[0];
   let maxSrednjaOcena = nizBrojaca[0] + 1;
-  for (let i = 0; i < nizBrojaca; i++) {
+  for (let i = 0; i < nizBrojaca.length; i++) {
     if (max < nizBrojaca[i]) {
       max = nizBrojaca[i];
-      maxSrednjaOcena = nizBrojaca[i] + 1;
+      maxSrednjaOcena = i + 1;
     }
   }
   return maxSrednjaOcena;
