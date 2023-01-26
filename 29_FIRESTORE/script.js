@@ -106,26 +106,6 @@ db.collection("customers")
 
 // Add a new document in collection "users"
 
-db.collection("users")
-  .doc("bpetronijevic")
-  .set(
-    {
-      age: 90,
-      name: "Branislav",
-      surname: "Petronijevic",
-      height: 155,
-    },
-    {
-      merge: true,
-    }
-  )
-  .then(function () {
-    console.log("Task successfully added!");
-  })
-  .catch(function (error) {
-    console.error("Error adding task: ", error);
-  });
-
 // Update metoda
 
 db.collection("users")
@@ -148,4 +128,44 @@ db.collection("users")
   })
   .catch((err) => {
     console.log(err);
+  });
+
+db.collection("users")
+  .doc("bpetronijevic")
+  .set(
+    {
+      age: 90,
+      name: "Branislav",
+      surname: "Petronijevic",
+      height: 155,
+    },
+    {
+      merge: true,
+    }
+  )
+  .then(function () {
+    console.log("Task successfully added!");
+  })
+  .catch(function (error) {
+    console.error("Error adding task: ", error);
+  });
+
+db.collection("users")
+  .doc("mkotovic")
+  .set(
+    {
+      age: 55,
+      name: "Mile",
+      surname: "Kotovic",
+      height: 170,
+    },
+    {
+      merge: true,
+    }
+  )
+  .then(function () {
+    console.log("Task successfully added!");
+  })
+  .catch(function (error) {
+    console.error("Error adding task: ", error);
   });
