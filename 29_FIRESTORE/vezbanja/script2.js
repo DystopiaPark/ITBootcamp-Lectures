@@ -1,50 +1,49 @@
-/*
-// delete
-db.collection("customers")
-  .doc("cust001")
-  .delete()
-  .then(() => {
-    console.log("Dokument uspesno izbrisan");
-  })
-  .catch((e) => {
-    console.log("Desila se greska: " + e);
-  });
+// // delete
+// db.collection("customers")
+//   .doc("cust001")
+//   .delete()
+//   .then(() => {
+//     console.log("Dokument uspesno izbrisan");
+//   })
+//   .catch((e) => {
+//     console.log("Desila se greska: " + e);
+//   });
 
-// Dodavanje dokumenta u kolekciju preko metode add()
-db.collection("customers")
-  .add({
-    name: "Mika Mikic",
-    age: 25,
-    salary: 800,
-    addresses: ["Beograd", "Novi Sad"],
-  })
-  .then(() => {
-    console.log("Dokument uspesno dodat");
-  })
-  .catch((e) => {
-    console.log("Desila se greska: " + e);
-  });
+// // Dodavanje dokumenta u kolekciju preko metode add()
+// db.collection("customers")
+//   .add({
+//     name: "Mika Mikic",
+//     age: 25,
+//     salary: 800,
+//     addresses: ["Beograd", "Novi Sad"],
+//   })
+//   .then(() => {
+//     console.log("Dokument uspesno dodat");
+//   })
+//   .catch((e) => {
+//     console.log("Desila se greska: " + e);
+//   });
 
-// 1) Moze se dohvatiti jedan dokument
-// 2) Moze se dohvatiti vise dokumenata
+// // 1) Moze se dohvatiti jedan dokument
+// // 2) Moze se dohvatiti vise dokumenata
 
-// 1)
-db.collection("users")
-  .doc("vristic")
-  .get() // get metoda vraca promise
-  .then((doc) => {
-    if (doc.exists) {
-      // proveravamo da li dokument postoji
-      let data = doc.data(); // metoda koja uzima podatke
-      console.log("Uspesno skinut dokument: " + doc.id);
-      console.log(data);
-    } else {
-      console.log("Ne postoji dati dokument");
-    }
-  })
-  .catch((e) => {
-    console.log("Greska: " + e);
-  });
+// // 1)
+// db.collection("users")
+//   .doc("vristic")
+//   .get() // get metoda vraca promise
+//   .then((doc) => {
+//     if (doc.exists) {
+//       // proveravamo da li dokument postoji
+//       let data = doc.data(); // metoda koja uzima podatke
+//       console.log("Uspesno skinut dokument: " + doc.id);
+//       console.log(data);
+//     } else {
+//       console.log("Ne postoji dati dokument");
+//     }
+//   })
+//   .catch((e) => {
+//     console.log("Greska: " + e);
+//   });
 
 // 2)
 
@@ -61,7 +60,7 @@ db.collection("customers")
   .catch((e) => {
     console.log("Greska: " + e);
   });
-*/
+
 // GET metoda kod kolekcije:
 // 1) Prikazivanje dokumenata u odredjenom redosledu (OrderBy)
 // 2) Prikazivanje odredjenog broja dokumenata (limit)

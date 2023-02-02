@@ -22,6 +22,7 @@ function submitForm1(e) {
   getItems(
     "json/stock.json",
     (data) => {
+      // RESOLVE
       data.forEach((artikal) => {
         if (artikal.stock == 0) {
           ids.push(artikal.id);

@@ -1,6 +1,6 @@
 let ul = document.querySelector("ul");
 let divError = document.getElementById("error");
-let addButton = document.getElementById("add");
+// let addButton = document.getElementById("add");
 let form = document.querySelector("form");
 
 // db.collection("tasks")
@@ -29,7 +29,6 @@ form.addEventListener("submit", function (e) {
   let due_date = this.due_date.value;
   let priority = this.priority.checked;
   let description = this.description.value;
-
   let date1 = new Date(start_date);
   let date2 = new Date(due_date);
   let ts1 = firebase.firestore.Timestamp.fromDate(date1);
@@ -56,6 +55,7 @@ form.addEventListener("submit", function (e) {
   db.collection("tasks")
     .add(obj)
     .then(() => {
+      console.log(obj);
       divError.innerHTML = `Task successfully added!`;
       divError.style.color = "green";
     })
@@ -68,17 +68,21 @@ form.addEventListener("submit", function (e) {
 // Umesto direktnog pristupa dokumentima neke kolekcije
 // mnogo je bolje pristupati "snapshotovima"
 // odnosno, osluskivati promene u kolekciji
+// When you set a listener, Cloud Firestore sends your listener an initial snapshot of the data, and then another snapshot each time the document changes.
 
 db.collection("tasks").onSnapshot((snapshot) => {
   let changes = snapshot.docChanges();
+  console.log(changes);
   changes.forEach((change) => {
     let type = change.type; // tip promene (added, removed)
     let doc = change.doc; // sam dokument koji je izazvao promenu
     if (type == "added") {
       let task = doc.data();
       let li = document.createElement("li");
-      li.id = doc.id; // svaki list item ima svoj id, i to id dokumenta koji ga je tu stavio
-      li.innerHTML = `${task.title} (${task.start_date}) [${description}]`;
+      li.id = doc.id; // svaki list item dobija svoj id, i to id dokumenta koji ga je tu stavio
+      li.innerHTML = `${task.title} (${task.start_date.toDate()}) [${
+        task.description
+      }]`;
       if (task.priority == true) {
         li.style.color = "red";
       }
@@ -101,7 +105,6 @@ ul.addEventListener("click", function (e) {
     db.collection("tasks")
       .doc(id)
       .delete()
-
       .then(() => {
         divError.innerHTML = `Task successfully deleted!`;
         divError.style.color = "orange";

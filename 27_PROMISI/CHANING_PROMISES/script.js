@@ -29,7 +29,7 @@ let getResponse = (resource) => {
 
 getResponse("../JSON/prvi.json")
   .then((sadrzaj) => {
-    console.log("prvi.json resolved", sadrzaj);
+    console.log("prvi.json resolved", sadrzaj); // sadrzaj je ono sto se vraca kroz promise
     return getResponse("../JSON/drugi.json"); // Vraca promise na koji se odnosi naredni then
   })
   .then((sadrzajDrugog) => {
